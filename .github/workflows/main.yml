@@ -1,11 +1,3 @@
-name: StartBuild
-
-on:
-  workflow_dispatch:
-jobs:
-  build:
-    runs-on: ubuntu-18.04
-
-    steps:
-      - name: test
-        run: echo hello.
+steps:
+- name: Setup Debug Session
+  uses: csexton/debugger-action@master
