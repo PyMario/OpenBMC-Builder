@@ -4,7 +4,16 @@ on:
 
 env:
   DAY_OF_WEEK: Monday
-  TEMPLATECONF: ${{ vars.GITHUB_WORKSPACE }}openbmc/meta-facebook/meta-wedge/conf/templates/default
+  TEMPLATECONF: /home/runner/work/OpenBMC-Builder/OpenBMC-Builder/openbmc/meta-facebook/meta-wedge/conf/templates/default
+  BBPATH: /home/runner/work/OpenBMC-Builder/OpenBMC-Builder/openbmc/build
+  OLDPWD: /home/runner/work/OpenBMC-Builder/OpenBMC-Builder/openbmc
+  MACHINE: yosemite
+  BB_ENV_EXTRAWHITE: ALL_PROXY BBPATH_EXTRA BB_NO_NETWORK BB_NUMBER_THREADS BB_SETSCENE_ENFORCE BB_SRCREV_POLICY DISTRO FTPS_PROXY FTP_PROXY GIT_PROXY_COMMAND HTTPS_PROXY HTTP_PROXY MACHINE NO_PROXY PARALLEL_MAKE SCREENDIR SDKMACHINE SOCKS5_PASSWD SOCKS5_USER SSH_AGENT_PID SSH_AUTH_SOCK STAMPS_DIR TCLIBC TCMODE all_proxy ftp_proxy ftps_proxy http_proxy https_proxy no_proxy 
+  BUILDDIR: /home/runner/work/OpenBMC-Builder/OpenBMC-Builder/openbmc/build
+
+
+
+  
 
 jobs:
   build:
