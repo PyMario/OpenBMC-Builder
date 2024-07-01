@@ -33,4 +33,4 @@ jobs:
         run: whereis bitbake
 
       - name: bitbake
-        run: bitbake yosemite-image
+        run: ./yocto/lf-dunfell/poky/bitbake/bin/bitbake yosemite-image
