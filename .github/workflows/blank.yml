@@ -16,11 +16,10 @@ jobs:
       - name: configEmail
         run: git config --global user.email "2426525089@qq.com"
 
-      - name: clone 
-        run: git clone -b helium https://github.com/facebook/openbmc.git
-
-      - name: cd
-        run: cd openbmc
+      - uses: actions/checkout@v4
+        with:
+          repository: 'facebook/openbmc'
+          ref: helium 
 
       - name: sync
         run: ${{ github.workspace }}/openbmc/sync_yocto.sh
