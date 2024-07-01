@@ -15,9 +15,12 @@ jobs:
           repository: 'facebook/openbmc'
           ref: helium 
 
-      - name: ConfigGit
+      - name: ConfigGitUsername
         run:
           git config --global user.name "PyMario"
+
+      - name: ConfigGitEmail
+        run:
           git config --global user.email "2426525089@qq.com"
           
       - name: sync
