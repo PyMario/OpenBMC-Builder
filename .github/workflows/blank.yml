@@ -7,6 +7,23 @@ jobs:
     runs-on: ubuntu-20.04
 
     steps:
+      - name: apt
+        run: sudo apt-get install gawk wget diffstat unzip texinfo gcc-multilib build-essential chrpath socat cpio python python3 python3-pip python3-pexpect xz-utils debianutils iputils-ping libsdl1.2-dev xterm
+
+      - name: clone 
+        run: git clone -b helium https://github.com/facebook/openbmc.git
+
+      - name: cd
+        run: cd openbmc
+
+      - name: sync
+        run: ./sync_yocto.sh
+
+      - name: source
+        run: source openbmc-init-build-env yosemite
+
+      - name: bitbake
+        run: bitbake yosemite-image
+
       - name: Setup Debug Session
         uses: csexton/debugger-action@master
-
