@@ -10,6 +10,12 @@ jobs:
       - name: apt
         run: sudo apt-get install gawk wget diffstat unzip texinfo gcc-multilib build-essential chrpath socat cpio python python3 python3-pip python3-pexpect xz-utils debianutils iputils-ping libsdl1.2-dev xterm
 
+      - name: configUsername
+        run: git config --global user.name "PyMario"
+
+      - name: configEmail
+        run: git config --global user.email "2426525089@qq.com"
+
       - name: clone 
         run: git clone -b helium https://github.com/facebook/openbmc.git
 
