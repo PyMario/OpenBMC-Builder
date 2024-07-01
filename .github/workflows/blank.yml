@@ -42,11 +42,5 @@ jobs:
       - name: sync
         run: ./sync_yocto.sh
 
-      - name: source
-        run: source openbmc-init-build-env yosemite
-
-      - name: debug_findbitbake
-        run: whereis bitbake
-
       - name: bitbake
         run: ./yocto/lf-dunfell/poky/bitbake/bin/bitbake yosemite-image
