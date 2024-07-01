@@ -13,6 +13,9 @@ jobs:
       - name: clone 
         run: git clone -b helium https://github.com/facebook/openbmc.git
 
+      - name: cd
+        run: cd openbmc
+
       - name: sync
         run: ${{ github.workspace }}/openbmc/sync_yocto.sh
 
