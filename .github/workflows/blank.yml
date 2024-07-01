@@ -15,6 +15,11 @@ jobs:
           repository: 'facebook/openbmc'
           ref: helium 
 
+      - name: ConfigGit
+        run:
+          git config --global user.name "PyMario"
+          git config --global user.email "2426525089@qq.com"
+          
       - name: sync
         run: ./sync_yocto.sh
 
