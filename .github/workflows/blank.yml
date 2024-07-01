@@ -14,10 +14,10 @@ jobs:
         run: git clone -b helium https://github.com/facebook/openbmc.git
 
       - name: sync
-        run: ${{ github.workspace }}/sync_yocto.sh
+        run: ${{ github.workspace }}/openbmc/sync_yocto.sh
 
       - name: source
-        run: source ${{ github.workspace }}/openbmc-init-build-env yosemite
+        run: source ${{ github.workspace }}/openbmc/openbmc-init-build-env yosemite
 
       - name: bitbake
         run: bitbake yosemite-image
