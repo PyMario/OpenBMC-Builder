@@ -29,5 +29,8 @@ jobs:
       - name: source
         run: source openbmc-init-build-env yosemite
 
+      - name: debug_findbitbake
+        run: whereis bitbake
+
       - name: bitbake
         run: bitbake yosemite-image
